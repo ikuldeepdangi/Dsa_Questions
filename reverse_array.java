@@ -2,13 +2,20 @@ import java.util.*;
 
 public class reverse_array {
     public static void reverse(int arr[]){
-        int rarr[]={0,0,0,0,0,0};
-        int e=arr.length;
+        int start=0;
+        int end=arr.length-1;
 
+        for(int i=0;i<arr.length/2;i++){
+            // swap
+            int temp = arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            
+            start++;
+            end--;
+        }
         for(int i=0;i<arr.length;i++){
-            // interchange
-            rarr[i]=arr[e];
-            e--;
+            System.out.print(arr[i]);
         }
 
     }
